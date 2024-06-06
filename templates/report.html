@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Report</title>
+</head>
+<body>
+    <h1>Scan Report</h1>
+    <ul>
+        {% for vuln, found in results.items() %}
+            <li>{{ vuln }}: {{ 'Vulnerable' if found else 'Not Vulnerable' }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+    <footer>
+        <p>Created by Sumanth</p>
+    </footer>
+</body>
+</html>
